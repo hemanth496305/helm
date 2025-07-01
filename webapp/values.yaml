@@ -1,0 +1,14 @@
+deployment:
+  name: login
+  replicas: 3
+  label: front
+  cont_name: login
+  image: nginx
+  port: 80
+
+service:
+  name: login
+  type: NodePort
+  label: front
+  port: 80
+  nodePort: 30007
